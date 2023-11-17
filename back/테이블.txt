@@ -1,0 +1,47 @@
+create table user_register(
+	userid varchar(40) not null,
+	userpw varchar(40) not null,
+	name varchar(40) null,
+	gender varchar(1) null,
+	address varchar(255) null,
+	phone_number varchar(40) null,
+	regdate varchar(160) null,
+	PRIMARY KEY (userid) 
+);
+
+create table user_route(
+	route_seq INT NOT NULL AUTO_INCREMENT,
+	userid varchar(40) not null,
+	b_mark varchar(100) null,
+	c_mark varchar(100) null,
+   	b_latitude varchar(100) null,
+   	b_longitude varchar(100) null,
+   	c_latitude varchar(100) null,
+   	c_longitude varchar(100) null,
+	PRIMARY KEY (route_seq) 
+);
+
+create table address(
+	addr_seq INT NOT NULL AUTO_INCREMENT,
+	addr1 varchar(40) null,
+	addr2 varchar(40) null,
+	PRIMARY KEY (addr_seq) 
+);
+
+create table bike(
+    	bike_id varchar(40) not null,
+    	bike_addr1 varchar(255) null,
+    	bike_addr2 varchar(255) null,
+    	latitude varchar(40) null,
+    	longitude varchar(40) null,
+    	PRIMARY KEY (bike_id)
+)
+
+create table culture(
+	culture_seq varchar(60) not null,
+	culture_name varchar(60) null,
+	culture_address varchar(100) null,
+	c_latitude varchar(40) null,
+	c_longitude varchar(40) null,
+	PRIMARY KEY (culture_seq) 
+);
